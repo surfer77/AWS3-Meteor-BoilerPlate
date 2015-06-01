@@ -1,0 +1,51 @@
+<head>
+  <title>uploadexample</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  <div class="container">
+    {{> loginButtons}}
+    {{> hello}}
+  </div>
+
+</body>
+
+<template name="hello">
+  <div class="panel panel-default push-down">
+    <div class="panel-heading">
+      <h3 class="panel-title">Uploads Section</h3>
+    </div>
+    <div class="panel-body">
+      <p>
+        Add Files
+        <span class="btn btn-default btn-file">
+          <input multiple type="file" name="file" class="file fileInput"/>
+        </span>
+      </p>
+    </div>
+    <div class="panel-footer">
+        <div class="col-md-9">
+          <table class="table table-hover table-striped table-bordered">
+            <thead>
+            <th>Name</th>
+            <th>Download</th>
+            </thead>
+            <tbody>
+              {{#each videos}}
+              <tr>
+                <td>{{name}}</td>
+                <td><a href="{{url download=true}}" type="button" class="btn btn-default">
+                  Download
+                </a></td>
+                <td>
+                    <img src="{{this.url}}" style="height: 150px; width:120px;">
+                </td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+</template>
