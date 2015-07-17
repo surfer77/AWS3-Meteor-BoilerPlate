@@ -1,6 +1,6 @@
 var videoStore = new FS.Store.S3("videos", {
-  accessKeyId: "AKIAI7XH62LZZT7QPFOQ", //required if environment variables are not set
-  secretAccessKey: "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", //required if environment variables are not set
+  accessKeyId: "keyID", //required if environment variables are not set
+  secretAccessKey: "acacess", //required if environment variables are not set
   bucket: "videocollectionfs", //required
   ACL: "", //optional, default is 'private', but you can allow public or secure access routed through your app URL
   folder: "videoproject/", //optional, which folder (key prefix) in the bucket to use
